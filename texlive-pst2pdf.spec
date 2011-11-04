@@ -68,6 +68,7 @@ acquired from the document itself via Perldoc.
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/tux.jpg
 #- source
 %doc %{_texmfdistdir}/source/latex/pst2pdf/Makefile
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -82,3 +83,5 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
