@@ -16,7 +16,8 @@ Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.doc.tar.x
 Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
-Requires(post):	texlive-tlpkg
+Requires(pre):	texlive-tlpkg
+Requires(post):	texlive-kpathsea
 Provides:	texlive-pst2pdf.bin = %{EVRD}
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
