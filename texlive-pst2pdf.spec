@@ -1,12 +1,12 @@
-# revision 21135
+# revision 24845
 # category Package
 # catalog-ctan /graphics/pstricks/scripts/pst2pdf
-# catalog-date 2011-01-19 22:35:34 +0100
+# catalog-date 2011-12-14 17:37:45 +0100
 # catalog-license gpl
 # catalog-version 0.12
 Name:		texlive-pst2pdf
 Version:	0.12
-Release:	1
+Release:	2
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
@@ -19,8 +19,6 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-pst2pdf.bin = %{EVRD}
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The script extracts the preamble of the document and runs all
@@ -34,19 +32,19 @@ include the processed snippets. Detail documentation is
 acquired from the document itself via Perldoc.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -59,6 +57,8 @@ acquired from the document itself via Perldoc.
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.bib
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.pdf
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.tex
+%doc %{_texmfdistdir}/doc/latex/pst2pdf/test.pdf
+%doc %{_texmfdistdir}/doc/latex/pst2pdf/test.tex
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/test1-pdf.pdf
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/test1.tex
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/test2-pdf.pdf
