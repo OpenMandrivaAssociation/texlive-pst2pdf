@@ -75,3 +75,21 @@ pushd %{buildroot}%{_bindir}
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.12-3
++ Revision: 755172
+- Rebuild to reduce used resources
+
+* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.12-2
++ Revision: 743316
+- texlive-pst2pdf
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.12-1
++ Revision: 719327
+- texlive-pst2pdf
+- texlive-pst2pdf
+- texlive-pst2pdf
+- texlive-pst2pdf
+
