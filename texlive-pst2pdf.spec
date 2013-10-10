@@ -1,19 +1,18 @@
-# revision 24845
+# revision 31118
 # category Package
 # catalog-ctan /graphics/pstricks/scripts/pst2pdf
-# catalog-date 2011-12-14 17:37:45 +0100
+# catalog-date 2013-07-06 19:43:54 +0200
 # catalog-license gpl
-# catalog-version 0.12
+# catalog-version 0.15
 Name:		texlive-pst2pdf
-Version:	0.12
-Release:	3
+Version:	0.15
+Release:	1
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.source.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -42,9 +41,9 @@ acquired from the document itself via Perldoc.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/pst2pdf
-%{_texmfdistdir}/scripts/pst2pdf/pst2pdf
+%{_texmfdistdir}/scripts/pst2pdf/pst2pdf.pl
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/Changes
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/Makefile
+%doc %{_texmfdistdir}/doc/latex/pst2pdf/Makefile.doc
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/README
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.bib
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.pdf
@@ -59,37 +58,17 @@ acquired from the document itself via Perldoc.
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/test3-pdf.pdf
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/test3.tex
 %doc %{_texmfdistdir}/doc/latex/pst2pdf/tux.jpg
-#- source
-%doc %{_texmfdistdir}/source/latex/pst2pdf/Makefile
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a0 -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/pst2pdf/pst2pdf pst2pdf
+    ln -sf %{_texmfdistdir}/scripts/pst2pdf/pst2pdf.pl pst2pdf
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.12-3
-+ Revision: 755172
-- Rebuild to reduce used resources
-
-* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.12-2
-+ Revision: 743316
-- texlive-pst2pdf
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.12-1
-+ Revision: 719327
-- texlive-pst2pdf
-- texlive-pst2pdf
-- texlive-pst2pdf
-- texlive-pst2pdf
-
