@@ -6,7 +6,7 @@
 # catalog-version 0.15
 Name:		texlive-pst2pdf
 Version:	0.15
-Release:	7
+Release:	8
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
