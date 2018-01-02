@@ -1,12 +1,6 @@
-# revision 31118
-# category Package
-# catalog-ctan /graphics/pstricks/scripts/pst2pdf
-# catalog-date 2013-07-06 19:43:54 +0200
-# catalog-license gpl
-# catalog-version 0.15
 Name:		texlive-pst2pdf
-Version:	0.15
-Release:	9
+Version:	0.18
+Release:	1
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
@@ -41,23 +35,8 @@ acquired from the document itself via Perldoc.
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/pst2pdf
-%{_texmfdistdir}/scripts/pst2pdf/pst2pdf.pl
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/Changes
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/Makefile.doc
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/README
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.bib
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/pst2pdf-doc.tex
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test.pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test.tex
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test1-pdf.pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test1.tex
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test2-pdf.pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test2.pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test2.tex
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test3-pdf.pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/test3.tex
-%doc %{_texmfdistdir}/doc/latex/pst2pdf/tux.jpg
+%{_texmfdistdir}/scripts/pst2pdf
+%doc %{_texmfdistdir}/doc/latex/pst2pdf
 
 #-----------------------------------------------------------------------
 %prep
