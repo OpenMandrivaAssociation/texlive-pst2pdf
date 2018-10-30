@@ -1,6 +1,6 @@
 Name:		texlive-pst2pdf
 Version:	0.18
-Release:	2
+Release:	3
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
