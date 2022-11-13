@@ -1,12 +1,12 @@
 Name:		texlive-pst2pdf
-Version:	0.18
-Release:	3
+Version:	56172
+Release:	1
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -25,29 +25,29 @@ include the processed snippets. Detail documentation is
 acquired from the document itself via Perldoc.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
 %{_bindir}/pst2pdf
 %{_texmfdistdir}/scripts/pst2pdf
-%doc %{_texmfdistdir}/doc/latex/pst2pdf
+%doc %{_texmfdistdir}/doc/support/pst2pdf
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/pst2pdf/pst2pdf.pl pst2pdf
+ln -sf %{_texmfdistdir}/scripts/pst2pdf/pst2pdf.pl pst2pdf
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
