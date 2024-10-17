@@ -3,7 +3,7 @@ Version:	56172
 Release:	2
 Summary:	A script to compile pstricks documents via pdftex
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
+URL:		https://www.ctan.org/tex-archive/graphics/pstricks/scripts/pst2pdf
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/pst2pdf.doc.r%{version}.tar.xz
