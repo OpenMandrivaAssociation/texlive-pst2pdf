@@ -1,5 +1,6 @@
 %global tl_name pst2pdf
 %global tl_revision 56172
+%global tl_bin_links pst2pdf:%{_texmfdistdir}/scripts/pst2pdf/pst2pdf.pl
 
 Name:		texlive-%{tl_name}
 Epoch:		1
@@ -15,6 +16,8 @@ BuildArch:	noarch
 BuildSystem:	texlive
 Requires:	texlive(pst2pdf.bin)
 Provides:	texlive(%{tl_name}) = %{tl_revision}
+Provides:	texlive(%{tl_name}.bin) = %{tl_revision}
+Provides:	texlive-%{tl_name}.bin = %{EVRD}
 
 %description
 The script extracts the preamble of the document and runs all
